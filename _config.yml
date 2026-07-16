@@ -1,0 +1,83 @@
+# YNU 数学考题合集 站点配置
+
+# 站点设置
+locale: "zh-CN"
+title: "YNU数学考题合集"
+title_separator: "-"
+subtitle: "云南大学数学课程历年试卷汇集"
+name: "YNU数学考题合集"
+description: "云南大学数学相关课程历年试卷合集，由同学自愿投稿整理。"
+url: "https://zzh0101-ww.github.io"
+repository: "zzh0101-ww/zzh0101-ww.github.io"
+
+# 作者信息
+author:
+  name: "YNU Math Exam"
+  avatar: "/images/ynu-logo.jpg"
+  bio: "云南大学数学考题合集"
+  location: "昆明, 云南"
+
+# 构建设置
+markdown: kramdown
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "air"
+
+# 输出设置
+permalink: /:categories/:title/
+paginate: 10
+paginate_path: /page:num/
+timezone: Asia/Shanghai
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# 搜索
+search: true
+search_full_content: true
+
+# 默认布局
+defaults:
+  # 所有页面
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "main"
+  # 首页
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+  # PDF 文件
+  - scope:
+      path: "assets/pdfs"
+    values:
+      pdf: true
+
+# 页脚
+footer:
+  links: []
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - package.json
+  - README.md
+
+# 包含
+include:
+  - _pages
